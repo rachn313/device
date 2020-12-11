@@ -1,0 +1,562 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Lumee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>LUMEE</h1>
+								<p>Designed for people who work from home, our device enables users to remotely 
+									signal when they are in a meeting to other members of their household. </p>
+								<p><b>Designers:</b> Lily Chu, Rachel Navarette, Rebecca Arango</p>
+								<p><b><a href = "https://github.com/lumee2020/device" target = "_blank">Github Repository</a></b> </p>
+								<p>un - lumee2020 & pw - lumeecs320</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Problem Statement</a></li>
+								<li><a href="#work">Conceptual Design</a></li>
+								<li><a href="#about">Design Process</a></li>
+								<li><a href="#prototype">Functional Prototype</a></li>
+								<li><a href="#presentation">Presentation</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Problem Statement -->
+							<article id="intro">
+								<h2 class="major">Problem Statement</h2>
+								<!--Image: Conceptual Design Diagram without Labels-->
+								<span class="image main"><img src="images/Final_Design.jpg" alt="" /></span>
+								<p>
+									Our goal is to create a tangible user interface that helps 
+									people study and work at home. 
+								</p>
+								<p>
+									In multi-person households, it is difficult to communicate
+									or know when others are in a meeting and need space and quiet.
+								</p>
+								<p>
+									<b>Lumee</b> is a TUI that allows family members or people
+									living together in one household to remotely signal to each other that
+									they are currently in a virtual meeting. They are also able to designate
+									the importance of a meeting, ranging from high priority to low priority.
+								</p>
+								<p>
+									No more memorizing other people's schedules or accidentally zoom
+									bombing in the background. Lumee's got your back!
+								</p>
+
+							</article>
+
+						<!--Conceptual Design -->
+							<article id="work">
+								<h2 class="major">Conceptual Design</h2>
+								<!--Image: Lily's Drawing of the family holding the LuMees-->
+								<span class="image main"><img src="images/LuMee_Family.jpg" alt="" /></span>
+								<p>
+									Users communicate with each other via lit and unlit LEDs.
+									Ultimately we imagined each user of a household to have
+									their own Lumee device, a small box with strips of LEDs on top.
+									One strip would be a row of three LEDs and each strip is a
+									different color. Each user would be assigned to a different strip, and
+									by extension a different color.
+								</p>
+								<br>
+								<!--Image: A diagram of the the final LuMee (Design Artifact?)-->
+								<span class="image main"><img src="images/Final_Design_And_Diagram.jpg" alt="" /></span>
+								<p>
+									On the side of each device are three buttons. If the user presses the 
+									first button, the first LED in their assigned strip will light up on each 
+									Lumee device. One lit lED indicates that this user is in a low-priority meeting. 
+									If the user presses the second button, the second LED will light up on each device. 
+									Two lit LEDS indicate that this user is in a medium-priority meeting.
+									If the user presses the third button, the third LED will light up on each device. 
+									Three lit LEDs indicate that this user is in a high-priority meeting.
+								</p>
+							</article>
+
+						<!-- Design Process -->
+							<article id="about">
+								<h2 class="major">Design Process</h2>
+								<!--Image: LF Prototype to last Design Diagram-->
+								<h3><b>Initial Design</b></h3>
+								<span class="image main"><img src="images/Process_Summary.jpg" alt="" /></span>
+									<b>
+									   Intially we imagined that the LEDs could be controlled with an on/off button
+									   and a slider to adjust light intensity. Below, we outline a few initial artifacts
+									   that helped us communicate our initial design: user scenario, storyboard, visual and
+									   tangible design, and a low-fidelity prototype.
+									 </b>
+								</p>
+								<br>
+								<!--User Scenario-->
+								<!--Image: Family Picture-->
+								<h3><b>Initial User Scenario</b></h3>
+								<span class="image main"><img src="images/LuMee_Family.jpg" alt="" /></span>
+								<p>
+									"The Smith family has two parents working from home (the father is a business consultant, 
+									and the mother is a middle school teacher), a child in high school (in a hybrid learning 
+									environment), a child in college (located in different timezone) studying remotely from home,
+									and a child who is in elementary school."
+									<br>
+									"Each of the five family members are constantly attending meetings or classes at various times
+									of the day, and often find themselves struggling to find privacy, or being able to communicate 
+									to one another that they should not be interrupted. Mrs. Smith teaches classes all day and is 
+									frequently interrupted by her husband and children, asking for food, playtime, or other things. 
+									At 9:00 PM, one of her students located in a different time zone requests an impromptu 1:1 meeting. 
+									This is a problematic time for Mrs. Smith, because this is when she usually puts her youngest to bed 
+									and checks on her other children. Mrs. Smith has just finished  a meeting with another student, so 
+									she does not have time to run through the house between the meetings to let her husband know that he 
+									will have to take over.""
+								</p>
+								<br>
+								<!--Storyboard-->
+								<!--Image: Storyboard-->
+								<h3><b>Initial Storyboard</b></h3>
+								<span class="image main"><img src="images/Storyboard.jpg" alt="" /></span>
+								<p>
+									One of the most crucial features of the system is the capability of the LEDs to turn on and off 
+									on each device in the household. This network of connected devices and the dynamic LEDs allow for 
+									understandable and correct communication between users. If one user is assigned to the red LED, 
+									and they turn their LED on, the red LED on every other user’s device should turn on. If the red 
+									user adjusts their LED, then the brightness of the every red LED on all of the devices should be 
+									adjusted accordingly. The simple and rapid on and off switch on a light captures the nature of the 
+									modern workplace: fast-paced and ever-changing, making it the perfect representation for a state of work. 
+									Additionally, the portable size and connected network allows each user to have their device in constant 
+									proximity to them, wherever they may be.
+								</p>
+								<br>
+								<!--Visual and Tangible Design-->
+								<!--Image: Rachel's Initial Images-->
+								<h3><b>Initial Visual and Tangible Design</b></h3>
+								<span class="image main"><img src="images/Visual_Tangible_Design.jpg" alt="" /></span>
+								<p>
+									We purposefully designed simple features for this device, to ensure that users would intuitively
+									understand how to correctly use the device to their advantage. We envisioned a box with a cluster 
+									of LEDs on its top. Each LED would represent a different user, so each user could be assigned and  
+									identifiable with a unique color. Two buttons and a slider, located on the side of the box, could 
+									be used to turn the device on, to turn the user’s LED on, and to adjust the intensity of the light, 
+									respectively. In order to allow for a clean design, the electronic equipment, such as the motherboard 
+									and battery pack, would be hidden inside the box. In addition to focusing on a simple design, we also 
+									wanted the entire device to be comfortable on a flat surface, so that it could be stored near the user 
+									in their workspace, likely on a desk or table.
+								</p>
+								<br>
+								<!--Low-Fidelity Prototype-->
+								<!--Image: Lily's Prototype-->
+								<h3><b>Initial Low-Fidelity Prototype</b></h3>
+								<span class="image main"><img src="images/Low_Fidelity_Prototype.jpg" alt="" /></span>
+								<p>
+									This low-fidelity prototype was constructed using paper, tape, pipe cleaners, beads, sequins, and 
+									mini pom-poms. Ultimately, this prototype captures not only the look and feel of our device, but 
+									also provides a limited simulation of potential user interaction: using the slider. If this were a 
+									high-fidelity prototype, the slider would adjust the intensity of a specific LED. 
+								</p>
+								<br>
+								<!--Final Design-->
+								<!--Image: Final Conceptual Design-->
+								<h3><b>Final Design</b></h3>
+								<span class="image main"><img src="images/Final_Design_And_Diagram.jpg" alt="" /></span>
+									<p>
+										Although these initial artifacts outline an intensity-based light communication system,
+										we ultimately scratched that idea. After recieving feedback from our classmates, we realized
+										that our design could have more user-friendly attributes. 
+										<br>
+										We made three changes to the initial design: accumulation (three LEDS instead of one), buttons
+										to control each LED, and less users per device.
+										<br>
+										For more information, visit our Concept Design (linked on the hompage)!
+									</p>
+									<br>
+							</article>
+
+							<!--Functional Prototype-->
+							<article id="prototype">
+								<h2 class="major">Functional Prototype</h2>
+								<!--Final Functional Prototype-->
+								<!--Image: Final Prototype-->
+								<span class="image main"><img src="images/Final_Functional_Prototype_Diagram.jpg" alt="" /></span>
+								<!--Video: Final Prototype Video-->
+								<span class="image main"><video style = "display:block;margin:0 auto" width = "300" controls><source src = "images/Final_Functional_Prototype.mp4" type = "video/mp4"></video></span>
+								<p>
+									This is our final functional prototype, which looks a little different from our
+									final conceptual design. We found that in order to implement functional
+									prototype using the technological materials available to us, we needed 
+									to adjust our final aesthetic design. The lights located next to the set of
+									buttons are the LEDs assigned to the device owner. The lights perpendicular
+									of those are LEDs assigned to other users. 
+								</p>
+
+								<!--Final Functional Prototype Circuit-->
+								<h3>Technical Implementation</h3>
+								<!--Image: Rachel's Circuit Sketch-->
+								<span class = "image main"><img src = "images/Final_Circuit_Diagram.jpg" alt=""></span>
+								<!--Video: My Alligator Clip Video-->
+								<span class="image main"><video style = "display:block;margin:0 auto" width = "300" controls><source src = "images/Final_Circuit_Demo.mp4" type = "video/mp4"></video></span>
+								<p>
+									The technical implementation of our functional prototype consists of two
+									components: hardware and software. 
+								</p>
+								<p>
+									The majority of our hardware was chosen in order to work with the motherboard
+									we were using, an Adafruit Flora. We used Adafruit Neopixels, which are programmable
+									LEDs, Adafruit On/Off Buttons, and conductive thread to create the final circuit.
+									We ultimately designed two circuits, one for the LEDs dedicated to the device owner,
+									and one dedicated to another user. The owner's LEDs are constructed with three separate 
+									series circuits each consisting of a Neopixel and an On/Off Button, connected to PIN 6 on
+									the Adafruit Flora. The other user's set of three LEDs are connect in a parallel circuit.
+								</p>
+								<p>
+									Our software consisted of a sketch written in the Arduino IDE, which programs the set of LEDs 
+									to turn on and off accordingly. We used a compatable Adafruit Library to write much of our language.
+									To see our full code, visit our Github Repository, linked on the main page.
+								</p>
+								<h3>Previous Prototypes</h3>
+								<!--Previous Prototypes -- Parallel Circuits-->
+								<!--Image: Prototype with Parallel Circuit(s)-->
+								<span class = "image main"><img src = "images/Prototype_Circuit.jpg" alt=""></span>
+								<p>
+									Although for the final product, we used three series circuits to construct the device owner's LEDs and
+									on/off buttons, we explored a parallel circuit at first. We initially had hoped to build out a parallel
+									circuit for both rows of LEDs, but continued to run into problems. Eventually, we figured out that the
+									metallic thread was too unstable to support such a complex parallel circuit, so we redesigned our circuitry
+									into a set of three series circuits. 
+								</p>
+							</article>
+
+
+							<!--Presentation Slides-->
+							<article id="presentation">
+								<h2 class="major">Presentation Slides</h2>
+								<!--Add Images of All Slides-->
+								<span class="image main"><img src="images/slides/slide_1.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_2.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_3.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_4.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_5.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_6.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_7.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_8.jpg" alt="" /></span>
+								<span class="image main"><img src="images/slides/slide_9.jpg" alt="" /></span>								
+							</article>
+							
+							
+
+						
+							<!--<article id="contact">
+								<h2 class="major">Functional Prototype</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>-->
+
+						
+							<!--<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>-->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
